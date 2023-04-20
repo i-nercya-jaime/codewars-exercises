@@ -11,4 +11,12 @@ export function noOdds(values: number[]): number[] {
 
 }
 
+
+export function noOdds2(values: number[]): number[] {
+  // Return all non-odd values
+  let notOdd = values.filter(val => val % 2 === 0);
+  return notOdd
+}
+
 console.log(noOdds([1, 2, 3, 4]));
+console.log(noOdds2([1, 2, 3, 4]));
