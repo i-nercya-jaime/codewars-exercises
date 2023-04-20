@@ -22,7 +22,17 @@ export function reverseWords(str: string): string {
         reversedWords.push(reversedWord);
     }
     return reversedWords.join(" ");
-
-      
-
   }
+
+  export function reverseWords2(str: string): string {
+  
+    /*  1. Crear un array con las palabras originales
+        2. Bucle a través de cada palabra y creamos un array de caracteres
+        3. Dar la vuelta al array y hacerlo string
+        4. join the resulting array */
+    
+    return str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+  }
+
+  console.log(reverseWords("Jaime"))
+  console.log(reverseWords2("Jaime"))
