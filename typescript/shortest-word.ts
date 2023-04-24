@@ -11,4 +11,11 @@ function findShort(s: string): number {
     return shortest.length;
   }
 
+function findShort2(s: string): number {
+    const words: string[] = s.split(' ');
+    const lengths: number[] = words.map((word) => word.length);
+    return Math.min(...lengths);
+}
+  
   console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+  console.log(findShort2("bitcoin take over the world maybe who knows perhaps"))

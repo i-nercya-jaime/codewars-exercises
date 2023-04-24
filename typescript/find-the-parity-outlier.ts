@@ -14,7 +14,6 @@ export function findOutlier(integers: number[]): number {
     let length: number = integers.length, i;
     let evens: number[] = [];
     let odds: number[] = [];
-    let k: number;
 
     for(let i = 0; i < length; i++){
         if (integers[i] % 2 == 0){
