@@ -26,5 +26,11 @@ export function countSmileys(arr: string[]) {
     }
   return count;
   }
+
+  export function countSmileys2(arr: string[]) {
+    return arr.filter(i => /^[:;][~-]?[D\)]$/.test(i)).length;
+  }
+
   
 console.log(countSmileys([':D',':~)',';~D',':)']))
+console.log(countSmileys2([':D',':~)',';~D',':)']))
