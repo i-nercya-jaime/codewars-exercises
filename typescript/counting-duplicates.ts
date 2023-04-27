@@ -21,40 +21,17 @@ export function duplicateCount(text: string): number{
   }
 
 
-export function duplicateCount2(text: string): number{
-
-// Creamos charCount, es un map que mantiene un recuento de cuantas veces aparece
-// cada letra en la cadena de entrada text.
-  const charCount = new Map<string, number>();
-// Creamos duplicates, es un set que registra los caracteres que aparecen más de una vez.
-  const duplicates = new Set<string>();
-
-  const chars = text.toLowerCase().split("");
-
-  const duplicateChars = chars.filter((char) => {
-    if (charCount.has(char)) {
-      charCount.set(char, charCount.get(char)! + 1);
-      duplicates.add(char);
-      return true;
-    } else {
-      charCount.set(char, 1);
-      return false;
-    }
-  });
-  return duplicates.size;
-
-}
-
 export function duplicateCount3(text:string): number{
   let result = new Set();
 
-  for(let i of text.toLowerCase()){
+  text.toLowerCase();
+  for(let i of text){
     if(text.split(i).length > 2){
       result.add(i)
     }
   }
   return result.size;
 }
-  console.log(duplicateCount("jaiiaiawwmeeee"))
-  console.log(duplicateCount2("jaiiaiawwmeeee"))
-  console.log(duplicateCount3("jaiiaiawwmeeee"))
+
+console.log(duplicateCount("jaiiaiawwmeeee"))
+console.log(duplicateCount3("jaiiaiawwmeeee"))
