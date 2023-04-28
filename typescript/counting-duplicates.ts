@@ -20,18 +20,19 @@ export function duplicateCount(text: string): number{
     return countDuplicates
   }
 
+console.log(duplicateCount("jaiiaiawwmeeee"))
 
-export function duplicateCount3(text:string): number{
+export function duplicateCount2(text:string): number{
   let result = new Set();
 
-  text.toLowerCase();
-  for(let i of text){
-    if(text.split(i).length > 2){
-      result.add(i)
+  for (const char of text) {
+    const lowerChar = char.toLowerCase();
+    if (text.indexOf(lowerChar) !== text.lastIndexOf(lowerChar)) {
+      result.add(lowerChar);
     }
   }
+
   return result.size;
 }
 
-console.log(duplicateCount("jaiiaiawwmeeee"))
-console.log(duplicateCount3("jaiiaiawwmeeee"))
+console.log(duplicateCount2("jaiiaiawwmeeee"))
